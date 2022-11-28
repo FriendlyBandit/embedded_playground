@@ -1,0 +1,10 @@
+/home/friendlybandit/personal_projects/embedded_playground/reaction_game_rpi_rust/target/armv7-unknown-linux-gnueabihf/release/deps/ppv_lite86-54b7f5936039f9f9.rmeta: /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/generic.rs
+
+/home/friendlybandit/personal_projects/embedded_playground/reaction_game_rpi_rust/target/armv7-unknown-linux-gnueabihf/release/deps/libppv_lite86-54b7f5936039f9f9.rlib: /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/generic.rs
+
+/home/friendlybandit/personal_projects/embedded_playground/reaction_game_rpi_rust/target/armv7-unknown-linux-gnueabihf/release/deps/ppv_lite86-54b7f5936039f9f9.d: /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs /home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/generic.rs
+
+/home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs:
+/home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs:
+/home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs:
+/home/friendlybandit/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/generic.rs:

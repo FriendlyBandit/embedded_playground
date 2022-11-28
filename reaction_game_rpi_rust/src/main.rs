@@ -1,38 +1,39 @@
-use tokio::time::{self, Duration, sleep};
 use std::error::Error;
+use std::thread;
 
-use rppal::gpio::{Gpio, Trigger};
+//Import our other file
+mod gameplayer;
 
-const GPIO_LED: u8 = 6;
-const GPIO_BUTTON: u8 = 16;
+//Player 1 constants
+const P1_LED_GREEN: u8 = 6;
+const P1_LED_RED: u8 = 13;
+const P1_BUTTON: u8 = 16;
+
+//Player 2 constants
+const P2_LED_GREEN: u8 = 26;
+const P2_LED_RED: u8 = 20;
+const P2_BUTTON: u8 = 19;
 
 #[tokio::main(worker_threads=3)]
 async fn main() -> Result<(), Box<dyn Error>>{
-    // let mut counter = 0;
-    // let mut interval = time::interval(Duration::from_millis(300));
-    let mut led = Gpio::new()?.get(GPIO_LED)?.into_output();
-    let mut button  = Gpio::new()?.get(GPIO_BUTTON)?.into_input();
-    button.set_interrupt(Trigger::RisingEdge)?;
+    let mut player1 = gameplayer::GamePlayer::new(P1_BUTTON, P1_LED_RED, P1_LED_GREEN, 1)?;
+    let mut player2 = gameplayer::GamePlayer::new(P2_BUTTON, P2_LED_RED, P2_LED_GREEN, 2)?;
 
-    led.set_low();
-    button.poll_interrupt(true, None)?;
-    led.set_high();
+    let p_1_thread = thread::spawn(move || -> Result<gameplayer::GamePlayer, Box<dyn Error + Send + Sync>> {
+        player1.run()?;
 
-    // loop{
-    //     led.set_low();
-    //     sleep(Duration::from_millis(100)).await;
-    //     led.set_high();
-    //     interval.tick().await; //First tick happens instantly
-    //     println!("One Period");
+        Ok(player1)
+    });
 
-    //     counter += 1;
-    //     if counter > 10{
-    //         break;
-    //     }
-    // }
+   let p_2_thread = thread::spawn(move || -> Result<gameplayer::GamePlayer, Box<dyn Error + Send + Sync>> {
+        player2.run()?;
+
+        Ok(player2)
+    });
+
+    player1 = p_1_thread.join().unwrap().unwrap(); 
+    player2 = p_2_thread.join().unwrap().unwrap(); 
+    
+    println!("Scores for the game\n Player {}: {}\n Player {}: {}", player1.id, player1.total, player2.id, player2.total);
     Ok(())
-}
-
-async fn _player(){
-
 }
