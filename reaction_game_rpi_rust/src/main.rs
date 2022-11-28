@@ -14,8 +14,7 @@ const P2_LED_GREEN: u8 = 26;
 const P2_LED_RED: u8 = 20;
 const P2_BUTTON: u8 = 19;
 
-#[tokio::main(worker_threads=3)]
-async fn main() -> Result<(), Box<dyn Error>>{
+fn main() -> Result<(), Box<dyn Error>>{
     let mut player1 = gameplayer::GamePlayer::new(P1_BUTTON, P1_LED_RED, P1_LED_GREEN, 1)?;
     let mut player2 = gameplayer::GamePlayer::new(P2_BUTTON, P2_LED_RED, P2_LED_GREEN, 2)?;
 
