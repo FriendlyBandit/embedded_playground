@@ -61,7 +61,7 @@ fn main() -> Result<()> {
             
             //more memcpy
             message[28..(28 + (width*3) as usize)].copy_from_slice(&bytes);
-            socket.send_to(&message, "127.0.0.1:9000").unwrap();
+            socket.send_to(&message, "192.168.1.125:9000").unwrap();
         }
         count+=1;
     }

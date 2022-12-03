@@ -22,3 +22,14 @@ If using the bash script make sure to install:
 sudo apt-get install sshpass
 
 And to have the readonly variables changed as necessary. WAY easier than c++.
+
+## New Steps:
+Follow upen CV github steps. 
+
+Some helpful links:
+
+https://medium.com/analytics-vidhya/the-ultimate-opencv-cross-compilation-guide-for-embedded-processors-f2fdc8ccb7b2
+
+https://github.com/twistedfall/opencv-rust
+
+https://docs.opencv.org/4.x/d0/d76/tutorial_arm_crosscompile_with_cmake.html
