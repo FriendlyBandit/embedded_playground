@@ -216,8 +216,13 @@ public class StreamedImagePanel extends JPanel implements Runnable {
                 int ccol = dis.readInt();
                 int cseg = dis.readInt();
                 try {
+                    // System.out.println(lineRGBDataBuffer.length + " " + (this.imageWidth * bytesPerPixel));
+                    //System.out.println("Reading " + lineRGBDataBuffer.length + " bytes from the buffer.");
                     dis.readFully(lineRGBDataBuffer, 0, bytesPerPixel * imageWidth);
                 } catch (java.io.EOFException e) {
+                    //System.out.println(startTime + " " + currentTime + " " + cimageNumber + " " + crow + " " + ccol + " " + cseg);
+                    // System.out.println("EOFException, we were not able to read the full line of data.");
+                    // e.printStackTrace();
                 }
 
                 /**
